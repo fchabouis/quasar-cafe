@@ -21,7 +21,9 @@ export default new VueRouter({
    */
 
   routes: [
-    { path: '/', component: load('Index') }, // Default
+    { name: 'home', path: '/', component: load('Index') }, // Default
+    { name: 'lists', path: '/lists', component: load('Lists') }, // Lists available
+    { name: 'listEdition', path: '/listEdition/:listName', component: load('ListEdition') }, // Edit/create list
     { path: '*', component: load('Error404') } // Not found
   ]
 })
